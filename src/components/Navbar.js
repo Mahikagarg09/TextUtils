@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from "react-router-dom";
 
 export default function Navbar(props) {
     return (
@@ -10,14 +9,6 @@ export default function Navbar(props) {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto" mb-2 mb-lg-0>
-                    <li className="nav-item ">
-                        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                     <li className="nav-item">
-                        <Link className="nav-link" to="/About">{props.abouttext}</Link>
-                    </li>
-                </ul>
                 <button onClick={props.toggleMode} className="btn btn-outline my-2 my-sm-0" type="submit">Enable {props.mode===`light` ? `dark` : `light`} mode</button>
             </div>
         </nav>
